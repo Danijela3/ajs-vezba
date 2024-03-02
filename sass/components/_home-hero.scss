@@ -1,0 +1,72 @@
+.home-hero {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0 30px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: -100px 0;
+    position: relative;
+
+    @include respond-to('small') {
+        padding: 130px 0 50px 0;
+    }
+
+    @include respond-to('medium') {
+        padding: 170px 0 80px 0;
+    }
+
+    &__top {
+        margin-bottom: 20px;
+    }
+
+    &__bottom {
+       
+        .button {
+            margin-top: 20px;
+
+            @include respond-to('medium') {
+                margin-top: 36px;
+            }
+        }
+    }
+
+    &__text {
+        max-width: 590px;
+        font-weight: 300;
+    }
+
+    &__scroll-down {
+        
+        position: absolute;
+        bottom: -92px;
+        right: 20px;
+        @include respond-to("small") {
+            right: 37%;
+        }
+        @include respond-to("medium") {
+            right: 42%;
+        }
+
+        img {
+            animation: rotation 6s infinite linear;
+        }
+        @keyframes rotation {
+            from {
+              transform: rotate(0deg);
+            }
+            to {
+              transform: rotate(360deg);
+            }
+          }
+        
+
+        
+       
+    }
+    
+
+
+}

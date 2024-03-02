@@ -1,0 +1,164 @@
+.virtual-office {
+    padding-bottom: 120px;
+
+    &__header {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+        min-height: 100vh;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__description {
+
+        display: block;
+        margin-top: 100px;
+        margin-bottom: 70px;
+
+
+
+        @include respond-to("small") {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 120px;
+
+
+        }
+    }
+
+    &__description-left {
+        margin-bottom: 40px;
+    }
+
+    &__description-left h4 {
+        font-size: 52px;
+        font-weight: 500;
+        color: $title-color;
+        line-height: 1;
+
+    }
+
+    &__description-left p {
+        font-size: 22px;
+        font-weight: 400;
+        color: $title-color;
+    }
+
+    &__description-right {
+        margin-bottom: 30px;
+    }
+
+    &__packages {
+
+        display: block;
+
+        @include respond-to("small") {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        @include respond-to("medium") {
+
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 10px;
+            margin-bottom: 50px;
+
+        }
+
+    }
+
+    &__offer-description h4 {
+        text-transform: uppercase;
+        color: $title-color;
+    }
+
+    &__offer {
+        background: $background-light;
+        color: #777777;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    &__plus {
+        background: $background-dark;
+        color: white;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    &__plus-description {
+        margin-bottom: 20px;
+    }
+
+    &__plus-description p {
+        font-size: 18px;
+    }
+
+    &__offer-description {
+        margin-bottom: 20px;
+    }
+
+    &__offer-description p {
+        font-size: 18px;
+    }
+
+    &__plus-description h4 {
+        text-transform: uppercase;
+        color: white;
+
+    }
+
+    &__package-container {
+        padding: 20px;
+
+
+    }
+
+    &__button {
+        text-align: center;
+        margin-top: auto;
+    }
+
+    &__button a {
+        text-align: center;
+        margin-top: auto;
+        display: block;
+    }
+
+    &__button1 {
+
+        text-align: center;
+        margin-top: auto;
+    }
+
+    &__button1 a {
+        display: block;
+    }
+
+    &__number {
+        font-size: 62px;
+        font-weight: 600;
+        margin-top: 20px;
+        display: inline;
+        line-height: 1;
+    }
+
+    &__offer-list {
+font-size: 16px;
+    }
+
+    &__plus-list {
+        font-size: 16px;
+    }
+
+
+
+
+
+
+}

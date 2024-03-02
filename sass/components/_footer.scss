@@ -1,0 +1,154 @@
+.footer {
+    background-color: $background-dark;
+    color: white;
+    padding: 20px 0;
+
+    @include respond-to("small") {
+        padding: 40px 0;
+    }
+
+    @include respond-to("medium") {
+        padding: 60px 0;
+    }
+
+    @include respond-to("large") {
+        padding: 80px 0;
+    }
+    
+    .footer__heading {
+        margin-bottom: 20px;
+
+
+    }
+
+    &__flex {
+
+        @include respond-to("medium") {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        @include respond-to("large") {
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+    }
+
+
+    &__info p {
+
+        margin-bottom: 0;
+        line-height: 1.6;
+
+        @include respond-to("small") {
+            
+            font-size: 16px;
+        }
+
+    }
+
+
+
+    &__info {
+
+        margin-bottom: 50px;
+
+        @include respond-to("medium") {
+            margin-bottom: 0;
+        }
+    }
+
+
+
+    &__info ul {
+
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+    }
+
+    &__info a:hover {
+        color: $primary-color;
+    }
+
+
+    &__flex-left {
+
+        display: block;
+
+
+        @include respond-to("small") {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+
+        @include respond-to("medium") {
+            display: flex;
+            gap: 40px;
+
+        }
+
+    }
+
+    &__flex-left img {
+
+        @include respond-to("large") {
+            padding-right: 50px;
+        }
+    }
+
+    &__copyright {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include respond-to ("medium") {
+            align-items: end;
+            justify-content: space-between;
+        }
+
+    }
+
+    &__copyright-info {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        @include respond-to("medium") {
+            flex-direction: column;
+            align-items: end;
+        }
+    }
+
+    &__copyright-info a:hover {
+        color: $primary-color;
+    }
+
+    &__copyright-info p {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__copyright-info ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+
+        @include respond-to("medium") {
+            margin: 0;
+            align-items: end;
+        }
+
+    }
+
+}

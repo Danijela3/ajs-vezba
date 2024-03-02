@@ -1,0 +1,102 @@
+.our-clients {
+    padding: 120px 0;
+
+    &__grid-header {
+
+        display: block;
+
+        @include respond-to("small") {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &__grid-header-left h2 {
+        margin-bottom: 16px;
+    }
+
+    &__grid-header-left p {
+
+        font-size: 18px;
+        @include respond-to("small"){
+        font-size: 22px;
+        color: #454545;
+    }
+}
+
+    &__paragraph {
+        padding-bottom: 36px;
+    }
+
+
+
+    &__clients {
+        columns: 2;
+        margin-top: 36px;
+
+    }
+
+    &__client {
+
+        margin-bottom: 30px;
+        border-top: 1px solid #717171;
+        padding: 26px 0 0 0;
+
+        @include respond-to("small") {
+            display: flex;
+            gap: 10px;
+
+        }
+    }
+
+    &__client p {
+        margin-bottom: 0;
+        font-size: 16px;
+
+    }
+
+    &__grid {
+        margin-top: 78px;
+        display: block;
+
+        @include respond-to("small") {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 98px;
+            column-gap: 20px;
+
+        }
+    }
+
+    &__grid-left {
+        margin-bottom: 70px;
+        @include respond-to("small"){
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 22px;
+        
+    }
+    @include respond-to("medium"){
+        margin-bottom: 0;
+    }
+}
+
+    &__grid-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    &__paragraph blockquote {
+        margin: 0;
+
+    }
+
+    // &__grid-right p {
+    // padding-bottom: 36px;
+    // }
+
+
+}

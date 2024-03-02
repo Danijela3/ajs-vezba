@@ -1,0 +1,60 @@
+.remodeling {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    
+
+    &__green {
+
+        margin: 0 -20px;
+        padding: 40px 20px;
+        background-image: linear-gradient(rgba(13, 102, 51, 0.8),rgba(13, 102, 51, 0.8)); 
+        color: white;
+        position: relative;
+
+        @include respond-to("small") {  
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
+        
+        }
+
+        &:after {
+        @include respond-to("large") {
+            content: "";
+            display: block;
+            position: absolute;
+            right: 100%;
+            top: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(13, 102, 51, 0.8),rgba(13, 102, 51, 0.8));
+            width: 4000px;
+        }
+    }
+
+
+
+ 
+
+       
+    }
+
+    &__green-top h3 {
+        color: white;
+        font-size: 52px;
+        line-height: 1;
+    }
+
+    &__green-bottom {
+        padding-top: 130px;
+    }
+
+    &__button {
+        padding: 10px 22px;
+        margin-top: 36px;
+        font-size: 14px
+        ;
+    }
+}

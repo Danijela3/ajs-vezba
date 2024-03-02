@@ -1,0 +1,139 @@
+.coworking {
+
+    padding-bottom: 120px;
+
+    
+
+    &__header {
+    background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+        min-height: 100vh;
+        display: flex;
+        align-items: flex-end;
+       
+     
+    }
+
+    &__description-left h4 {
+        font-size: 52px;
+    }
+
+    &__description-left p{
+        font-size: 22px;
+        color: $title-color;
+    }
+
+    &__heading {
+        display: flex;
+    }
+
+   
+
+    h2 {
+
+        margin-bottom: 30px; 
+        color: white;
+    }
+
+    &__description {
+
+        display: block;
+        margin-top: 90px; 
+        
+
+        @include respond-to("small") {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 40px;
+        margin-top: 120px;
+        margin-bottom: 100px;
+        }
+
+    }
+
+    &__description-left h4 {
+        font-size: 45px;
+        margin-bottom: 40px;
+
+        @include respond-to("medium") {
+            font-size: 52px;
+        }
+    }
+
+    &__description-left {
+        margin-bottom: 30px;
+    }
+
+    &__description-right {
+        margin-bottom: 30px;
+    }
+
+    &__grid {
+
+        display: block;
+        margin-bottom: 40px;
+
+        @include respond-to("small")  {
+        display: grid;
+        grid-template-rows: 1fr 1fr ;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 20px;
+       row-gap: 48px;
+       
+        }
+        
+
+    }
+
+    &__grid-items {
+      
+        border: 1px solid #3F944A;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    &__grid-items-text {
+        font-size: 16px;
+        line-height: 1.3;
+        
+    }
+
+    &__grid-items-text ul {
+        padding: 0 0 0 20px;
+        margin: 0;
+    }
+
+ 
+
+    
+
+    &__grid-items h4 {
+        text-transform: uppercase;
+        color: $title-color;
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    &__coworking-button {
+        border: 1px solid #3f944a;
+        color: #3f944a;
+        padding: 10px 15px;
+        margin-top: 20px;
+        display: inline-block;
+    }
+    
+    &__footer p {
+        margin-bottom: 18px;
+    }
+
+    &__footer {
+        // margin-bottom: 100px;
+    }
+    
+
+    
+
+}

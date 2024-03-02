@@ -1,0 +1,23 @@
+{
+  "name": "izrazajnost",
+  "version": "1.0.0",
+  "description": "test project",
+  "main": "gulpfile.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Danijela Trifkovic",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.69.5"
+},
+"dependencies": {
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-line-ending-corrector": "^1.0.3",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1"
+}
+}

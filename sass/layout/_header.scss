@@ -1,0 +1,78 @@
+.header {
+  padding: 10px;
+  height: 100px;
+  position: relative;
+  z-index: 999;
+
+  &__left,
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-top: 10px;
+    margin-right: 17px;
+  }
+
+  &__phone-number {
+    color: white;
+    text-decoration: none;
+    margin-right: 5px;
+    display: none;
+     @include respond-to("medium") {
+      display: inline;
+      }
+  }
+
+  &__phone-icon {
+    margin-bottom: -2px;
+  }
+
+  &__hamburger-button {
+    
+    display: block;
+    position: fixed;
+    top: 18px;
+    right: 17px;
+    cursor: pointer;
+    width: 41px;
+    height: 41px;
+    background: transparent;
+    border: none;
+    
+    @include respond-to("medium") {
+      display: none;
+    } 
+  }
+
+  &__hamburger-button span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin: 5px auto;
+    background-color: #fff;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  #header-logo {
+    width: 50px;
+    height: 60px;
+
+    @include respond-to("medium") {
+      width: 70px;
+      height: 80px;
+    }
+  }
+
+  
+
+
+
+}

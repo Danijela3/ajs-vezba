@@ -1,0 +1,114 @@
+.our-spaces {
+    display: block;
+    background-color: $background-dark;
+    padding-top:  94px;
+
+    @include respond-to("medium") {
+    
+    display: flex;
+    flex-wrap: wrap;
+    }
+
+
+    
+
+
+    &__cards {
+        padding-bottom: 70px;
+        
+
+        @include respond-to("small") {
+            display: grid;
+            // grid-template-columns: 1fr 1fr;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            grid-gap: 40px;
+            padding-bottom: 120px;
+            
+        }
+    }
+
+    &__heading h2 {
+        color: white;
+        margin-bottom: 80px;
+    }
+
+
+    &__location-name span {
+        display: flex;
+        font-family: $font;
+        font-size: 16px;
+        color: $text-white-off;
+        margin-bottom: 5px;
+
+    }
+
+    &__location-name img {
+        margin-right: 5px;
+        position: relative;
+    }
+
+    &__location-name h3 {
+        color: white;
+
+    }
+
+    &__locations {
+        margin-bottom: 50px;
+
+        @include respond-to("small") {
+            margin-bottom: 0;
+
+            &:nth-child(even) {
+                margin-top: 70px;
+
+            }
+        }
+
+    }
+
+    &__spaces-gallery {
+
+
+        // width: 100%;
+        @include respond-to("small") {
+            // width: 48%;
+
+        }
+
+
+    }
+
+    &__cs-header {
+        margin-top: 50px;
+        margin-bottom: 60px;
+    }
+
+    &__item {
+
+        margin-top: 15px;
+
+        @include respond-to("medium") {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 20px;
+        }
+
+
+    }
+
+
+
+    &__explore-button {
+        text-align: left;
+        margin-top: 20px;
+
+        @include respond-to("medium") {
+            text-align: right;
+            margin-left: 20px;
+        }
+    }
+
+
+
+}

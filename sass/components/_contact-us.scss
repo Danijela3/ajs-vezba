@@ -1,0 +1,152 @@
+.contact-us {
+    background-color: #0D6633;
+    display: block;
+
+    @include respond-to("small") {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include respond-to("medium") {
+        // padding: 60px 0;
+    }
+
+
+    &__heading {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__heading h2, p {
+        color: white;
+    }
+
+    &__left {
+
+        color: white;
+        padding: 60px 60px 60px 50px;
+
+        @include respond-to("small") {
+            padding: 60px 30px 60px 30px;
+        }
+
+        @include respond-to("large") {
+            padding: 80px 60px 80px calc((100vw - 1200px) / 2);
+
+        }
+
+
+
+
+
+
+    }
+
+
+    &__left p {
+        margin-bottom: 50px;
+    }
+
+    &__right h4 {
+        color: white;
+    }
+
+    &__right {
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        background-position: center;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 60px 60px 60px 50px;
+
+        &:after {
+            content: "";
+            background: linear-gradient(to right, rgba(13, 102, 51, 1), rgba(13, 102, 51, 0));
+            display: block;
+            position: absolute;
+            width: 20%;
+            right: 100%;
+            bottom: 0;
+            left: 0;
+            top: 0;
+
+        }
+
+        @include respond-to("small") {
+            padding: 60px 30px 60px 30px;
+        }
+
+
+        @include respond-to("large") {
+            padding: 80px calc((100vw - 1200px) / 2) 80px 80px;
+        }
+
+    }
+
+
+    #fname,
+    #email,
+    #company,
+    #interested {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        background: #0D6633;
+        color: white;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+
+    }
+
+    textarea {
+        background: #0D6633;
+        color: white;
+        margin-bottom: 20px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    form {
+        max-width: 600px;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .button__white-border {
+        display: block;
+        padding: 12px 15px;
+        margin-top: 36px;
+        border-radius: 3px;
+    }
+
+
+
+
+
+}
+
+
+textarea:focus,
+input:focus {
+    outline: none;
+
+}
+
+.remodeling__button {
+    width: 100%;
+    font-weight: 700;
+    color: $title-color;
+    cursor: pointer;
+    border-radius: 3px;
+    border: none;
+}
