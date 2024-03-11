@@ -1,16 +1,15 @@
 .contact-us {
     background-color: #0D6633;
     display: block;
+    padding-top: 0;
+    padding-bottom: 0;
 
     @include respond-to("small") {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
 
-    @include respond-to("medium") {
-        // padding: 60px 0;
-    }
-
+  
 
     &__heading {
         display: flex;
@@ -42,6 +41,8 @@
 
     }
 
+    
+
 
     &__left p {
         margin-bottom: 50px;
@@ -59,7 +60,7 @@
         background-position: center;
         position: relative;
         display: flex;
-        justify-content: center;
+        justify-content: end;
         align-items: flex-end;
         padding: 60px 60px 60px 50px;
 
@@ -87,6 +88,10 @@
 
     }
 
+    &__right-info {
+        z-index: 1000;
+    }
+
 
     #fname,
     #email,
@@ -109,6 +114,7 @@
         border-left: none;
         border-right: none;
         border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        min-height: 100px;
     }
 
     form {
@@ -120,13 +126,19 @@
     textarea {
         width: 100%;
         max-width: 100%;
+        
     }
 
     .button__white-border {
-        display: block;
-        padding: 12px 15px;
+        
         margin-top: 36px;
-        border-radius: 3px;
+        
+
+        &__white-border svg {
+            border-right: 5px;
+            color: $primary-color;
+        }
+      
     }
 
 
@@ -150,3 +162,90 @@ input:focus {
     border-radius: 3px;
     border: none;
 }
+
+.button__white-border svg {
+    margin-right: 5px;
+    
+    // color: red;
+    // &:hover {
+    //     fill: #0D6633;
+    // }
+    
+}
+
+svg:hover {
+    fill: $primary-color;
+}
+
+
+.button__white-button {
+    width: 100%;
+    text-align: center;
+    
+}
+
+
+
+// select2 plugin
+.select2-container{
+    max-width: 100%;
+    
+}
+
+  form .select2-container--default .select2-selection--single {
+    background-color: #0D6633;
+    
+  }
+
+  .select2-results__options {
+    background-color: #0D6633 ;
+    color: white;
+  }
+
+  .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: #3F944A!important;
+    color: white!important;
+}
+
+.select2-container--default .select2-selection--single {
+    border-radius: 0!important;
+    
+}
+
+.select2-container--default .select2-results>.select2-results__options {
+    min-height: 200px;
+    overflow-y: auto;
+}
+
+.select2-dropdown {
+    border-radius: 0!important;
+}
+
+form .select2-container--default .select2-selection--single .select2-selection__rendered {
+    border: none;
+    
+    
+    // border-bottom: 1px solid rgba(255,255,255,.4);
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: white;
+
+}
+
+.select2-container--default .select2-selection--single {
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: 1px solid (255, 255, 255, 0.4)!important;
+}
+
+.select2-selection__arrow {
+    color: white;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: white transparent transparent transparent!important;
+}
+
+

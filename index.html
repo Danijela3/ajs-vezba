@@ -11,6 +11,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
 
 
 </head>
@@ -20,44 +22,141 @@
 <body>
 
 
-  <header class="header">
+  <header class="header" id="sticky-header">
 
     <div class="container">
 
       <div class="header__left">
         <a href="/" class="header__logo">
-          <img src="image/ventures-logo.png" alt="ventures-logo" id="header-logo">
-        </a>
-
-        <a href="/" class="header__phone-number"><svg width="14" height="13" viewBox="0 0 14 13" fill="none"
+          <img src="image/ventures-logo.svg" alt="ventures-logo" id="header-logo">
+          <svg class="logo-black" width="60" height="" viewBox="0 0 78 85" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path
-              d="M9.72714 8.67331L9.40485 8.99419C9.40485 8.99419 8.63773 9.75635 6.5446 7.67527C4.45148 5.59419 5.2186 4.83202 5.2186 4.83202L5.42118 4.62944C5.92198 4.13219 5.96943 3.33319 5.53239 2.74952L4.63989 1.55739C4.09873 0.834894 3.05393 0.739269 2.43414 1.35552L1.32206 2.46052C1.01535 2.76652 0.809934 3.16177 0.834726 3.60094C0.898476 4.72506 1.40706 7.1426 4.24323 9.96319C7.25152 12.9538 10.0742 13.0728 11.2281 12.9651C11.5936 12.9311 11.9109 12.7455 12.1666 12.4905L13.1725 11.4904C13.8525 10.8153 13.6612 9.65719 12.7914 9.18473L11.4385 8.44877C10.8676 8.13923 10.1734 8.22989 9.72714 8.67331Z"
-              fill="white" class="header__phone-icon" />
-          </svg> +381 69 2030230</a>
+              d="M15.4437 22.7988L28.1713 31.7456V46.2107H15.4437V22.7988ZM11.7581 70.3191H15.4437V49.877H28.1713V52.6924H31.8611V30.1773L11.7623 16.0459V70.3149L11.7581 70.3191Z"
+              fill="black" />
+            <path
+              d="M47.8125 25.1757L62.4794 14.9067L62.5172 15.9912V40.9296H66.207V8.09961L47.8167 20.9797V25.1757H47.8125Z"
+              fill="black" />
+            <path d="M44.9454 50.2891H41.2597V66.6227H34.728V70.2891L44.9454 70.264V50.2932V50.2891Z" fill="black" />
+            <path d="M23.6585 59.2071H38.3884V55.5449H19.9729V70.2894H25.304V66.6273H23.6627V59.2112L23.6585 59.2071Z"
+              fill="black" />
+            <path
+              d="M41.2555 40.926H44.9412V0L22.3489 14.3691V20.0042L26.0345 22.5985V16.2086L41.2513 6.53181V40.9301L41.2555 40.926Z"
+              fill="black" />
+            <path
+              d="M62.5171 47.4407V66.6231H51.498V55.5449H47.8124V70.2895L66.2069 70.2644V43.7827H38.4178V27.5908L34.7322 30.1852V47.449H62.5213L62.5171 47.4407Z"
+              fill="black" />
+            <path d="M28.1711 70.2851H31.861V62.0557H28.1711V70.2851Z" fill="black" />
+            <path
+              d="M3.11473 81.9395L3.24066 82.4692H3.27425L3.40018 81.9437L5.2136 75.2617H6.51491L3.84933 83.9249H2.66137L0 75.2617H1.29291L3.10633 81.9395H3.11473Z"
+              fill="black" />
+            <path
+              d="M15.3262 79.9077H12.3668V83.0151H15.8509V83.9327H11.1494V75.2695H15.8215V76.1955H12.3668V78.9859H15.3262V79.9077Z"
+              fill="black" />
+            <path
+              d="M26.6054 83.9285H25.3838L22.0046 77.5386L21.9669 77.5511V83.9327H20.7495V75.2695H21.9669L25.346 81.6428H25.3838V75.2695H26.6054V83.9327V83.9285Z"
+              fill="black" />
+            <path d="M36.9947 76.1916H34.6818V83.9288H33.4602V76.1916H31.1641V75.2656H36.9905V76.1916H36.9947Z"
+              fill="black" />
+            <path
+              d="M47.4221 75.2662V80.9971C47.4221 81.9565 47.1493 82.7072 46.6078 83.2453C46.0663 83.7834 45.361 84.0545 44.4921 84.0545C43.6232 84.0545 42.9515 83.7834 42.4184 83.2411C41.8853 82.6989 41.6208 81.9523 41.6208 80.993V75.262H42.834V80.993C42.834 81.6645 42.9851 82.19 43.2916 82.5654C43.598 82.945 43.9968 83.1327 44.4921 83.1327C44.9874 83.1327 45.4156 82.945 45.7304 82.5654C46.0453 82.19 46.2006 81.6645 46.2006 80.9888V75.2578H47.4221V75.2662Z"
+              fill="black" />
+            <path
+              d="M53.8699 79.2747H55.1628C55.6665 79.2747 56.0359 79.1412 56.2752 78.8784C56.5145 78.6157 56.6362 78.2403 56.6362 77.7564C56.6362 77.2726 56.5187 76.8763 56.2836 76.6011C56.0485 76.3299 55.6959 76.1923 55.2215 76.1923H53.8699V79.2747ZM53.8699 80.1965V83.9295H52.6525V75.2705H55.2215C56.0611 75.2705 56.7076 75.4832 57.1651 75.9087C57.6227 76.3341 57.8493 76.9431 57.8493 77.7356C57.8493 78.186 57.7444 78.5823 57.5303 78.9201C57.3162 79.258 57.0098 79.5249 56.611 79.7085C57.056 79.8586 57.3792 80.1089 57.5765 80.4592C57.7738 80.8096 57.8745 81.2392 57.8745 81.7564V82.5114C57.8745 82.7783 57.8997 83.0244 57.9501 83.2538C58.0005 83.4832 58.0928 83.6626 58.2271 83.7877V83.9254H56.9762C56.8419 83.7961 56.7495 83.5958 56.7075 83.3247C56.6656 83.0578 56.6446 82.7783 56.6446 82.4947V81.7648C56.6446 81.2809 56.5312 80.8972 56.3046 80.6177C56.0779 80.3341 55.7673 80.1965 55.3685 80.1965H53.8657H53.8699Z"
+              fill="black" />
+            <path
+              d="M67.332 79.9087H64.3726V83.0161H67.8568V83.9337H63.1553V75.2705H67.8274V76.1965H64.3726V78.9869H67.332V79.9087Z"
+              fill="black" />
+            <path
+              d="M76.735 81.7519C76.735 81.3557 76.6217 81.0304 76.395 80.7718C76.1683 80.5173 75.7653 80.2837 75.1903 80.071C74.3717 79.8166 73.742 79.4913 73.3055 79.0908C72.8647 78.6904 72.6464 78.1565 72.6464 77.4892C72.6464 76.8218 72.8899 76.242 73.3726 75.7999C73.8596 75.3578 74.4808 75.1367 75.2364 75.1367C76.0424 75.1367 76.6888 75.3828 77.1758 75.875C77.6627 76.3672 77.8978 76.9845 77.881 77.7269L77.8684 77.7645H76.7014C76.7014 77.2556 76.5671 76.8468 76.2943 76.534C76.0214 76.2212 75.6646 76.0627 75.2238 76.0627C74.7831 76.0627 74.4598 76.1962 74.2206 76.4673C73.9813 76.7384 73.8638 77.0721 73.8638 77.4808C73.8638 77.8562 73.9897 78.169 74.2416 78.4151C74.4934 78.6612 74.9174 78.8948 75.5093 79.1117C76.3027 79.3703 76.9071 79.7081 77.3227 80.1253C77.7383 80.5424 77.944 81.0804 77.944 81.7436C77.944 82.4485 77.7005 83.0116 77.2094 83.4329C76.7182 83.85 76.0802 84.0627 75.2826 84.0627C74.485 84.0627 73.847 83.8375 73.2803 83.3828C72.7136 82.9323 72.4407 82.2817 72.4575 81.4349L72.4701 81.3974H73.6455C73.6455 81.9855 73.8008 82.4235 74.1156 82.7113C74.4305 82.9991 74.8167 83.1451 75.2826 83.1451C75.7486 83.1451 76.0886 83.0199 76.3404 82.7655C76.5965 82.5152 76.7266 82.1774 76.7266 81.7519"
+              fill="black" />
+          </svg>
+        </a>
+
+        <div class="header__phone-number">
+          <a href="tel:+381692030230" class="header__phone-number"><svg width="14" height="13" viewBox="0 0 14 13"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M9.72714 8.67331L9.40485 8.99419C9.40485 8.99419 8.63773 9.75635 6.5446 7.67527C4.45148 5.59419 5.2186 4.83202 5.2186 4.83202L5.42118 4.62944C5.92198 4.13219 5.96943 3.33319 5.53239 2.74952L4.63989 1.55739C4.09873 0.834894 3.05393 0.739269 2.43414 1.35552L1.32206 2.46052C1.01535 2.76652 0.809934 3.16177 0.834726 3.60094C0.898476 4.72506 1.40706 7.1426 4.24323 9.96319C7.25152 12.9538 10.0742 13.0728 11.2281 12.9651C11.5936 12.9311 11.9109 12.7455 12.1666 12.4905L13.1725 11.4904C13.8525 10.8153 13.6612 9.65719 12.7914 9.18473L11.4385 8.44877C10.8676 8.13923 10.1734 8.22989 9.72714 8.67331Z"
+                fill="white" class="header__phone-icon" />
+            </svg> +381 69 2030230</a>
+        </div>
+
+
       </div>
 
 
       <div class="header__right">
-        <nav class="navigation">
+        <nav class="navigation" id="navigation">
+
+          <img src="image/ventures-logo.svg" alt="ventures-logo" class="header__logo-mobile">
+
           <ul>
-            <li><a href="#office-space">Office space</a></li>
+
+
+            <ul class="dropdown">
+              <li class="dropbtn"><a href="#office-space">Office space</a>
+
+                <ul class="sub-menu">
+                  <li><a href="#our-spaces">Our spaces</a></li>
+                  <li><a href="#coworking">Coworking</a></li>
+                </ul>
+
+              </li>
+            </ul>
+
+
             <li><a href="#our-spaces">Our spaces</a></li>
             <li><a href="#coworking">Coworking</a></li>
             <li><a href="#virtual-office">Virtual office</a></li>
             <li><a href="#why-us">Why us</a></li>
             <li><a href="#contact-us" class="button button__white-border">Contact us</a></li>
+            <li class="desktop-hide">
+              <a href="tel:+381692030230" class="header__phone-number-mobile">
+                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.72714 8.67331L9.40485 8.99419C9.40485 8.99419 8.63773 9.75635 6.5446 7.67527C4.45148 5.59419 5.2186 4.83202 5.2186 4.83202L5.42118 4.62944C5.92198 4.13219 5.96943 3.33319 5.53239 2.74952L4.63989 1.55739C4.09873 0.834894 3.05393 0.739269 2.43414 1.35552L1.32206 2.46052C1.01535 2.76652 0.809934 3.16177 0.834726 3.60094C0.898476 4.72506 1.40706 7.1426 4.24323 9.96319C7.25152 12.9538 10.0742 13.0728 11.2281 12.9651C11.5936 12.9311 11.9109 12.7455 12.1666 12.4905L13.1725 11.4904C13.8525 10.8153 13.6612 9.65719 12.7914 9.18473L11.4385 8.44877C10.8676 8.13923 10.1734 8.22989 9.72714 8.67331Z"
+                    fill="white" class="header__phone-icon" />
+                </svg> +381 69 2030230
+              </a>
+            </li>
           </ul>
-        </nav>
-        <button class="header__hamburger-button">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <div>
 
+
+          <div class="header__close-button" id="close-button"><svg width="41" height="41" viewBox="0 0 41 41"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20.5" cy="20.811" r="20" fill="white" />
+              <path
+                d="M30.1371 27.5258C30.3925 27.7812 30.536 28.1275 30.536 28.4887C30.536 28.8498 30.3925 29.1962 30.1371 29.4516C29.8817 29.7069 29.5354 29.8504 29.1742 29.8504C28.8131 29.8504 28.4667 29.7069 28.2113 29.4516L21.0191 22.2571L13.8246 29.4493C13.5692 29.7047 13.2229 29.8481 12.8617 29.8481C12.5006 29.8481 12.1542 29.7047 11.8988 29.4493C11.6435 29.1939 11.5 28.8476 11.5 28.4864C11.5 28.1252 11.6435 27.7789 11.8988 27.5235L19.0933 20.3313L11.9011 13.1368C11.6457 12.8814 11.5023 12.5351 11.5023 12.1739C11.5023 11.8127 11.6457 11.4664 11.9011 11.211C12.1565 10.9556 12.5028 10.8122 12.864 10.8122C13.2252 10.8122 13.5715 10.9556 13.8269 11.211L21.0191 18.4055L28.2136 11.2099C28.469 10.9545 28.8153 10.811 29.1765 10.811C29.5376 10.811 29.884 10.9545 30.1394 11.2099C30.3948 11.4653 30.5382 11.8116 30.5382 12.1728C30.5382 12.5339 30.3948 12.8803 30.1394 13.1357L22.9449 20.3313L30.1371 27.5258Z"
+                fill="#454545" />
+            </svg>
+          </div>
+
+        </nav>
+        <div class="header__hamburger-button" id="hamburger-button">
+          <div class="header__span" id="transparent-span">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
 
+        <a href="/" class="close-button" id="close-button"></a>
+
+        <!-- <svg width="147" height="317" viewBox="0 0 147 317" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g opacity="0.1">
+        <path d="M18.7498 130.257L83.4986 181.373V264.017H18.7498V130.257ZM0 401.756H18.7498V284.963H83.4986V301.049H102.27V172.413L0.0213597 91.6753V401.732L0 401.756Z" fill="white"/>
+        <path d="M168.83 287.318H150.08V380.638H116.852V401.585L168.83 401.442V287.342V287.318Z" fill="white"/>
+        <path d="M150.055 233.824H168.804V0L53.8711 82.0956V114.29L72.6209 129.113V92.6048L150.033 37.3184V233.847L150.055 233.824Z" fill="white"/>
+        <path d="M258.217 271.044V380.64H202.16V317.346H183.41V401.587L276.988 401.444V250.145H135.617V157.635L116.867 172.458V271.092H258.238L258.217 271.044Z" fill="white"/>
+        </g>
+        </svg> -->
+
+
+
+      </div>
+
+    </div>
   </header>
 
   <!--HOME HERO SECTION------------------------------------------------------------------------------------------------------------->
@@ -80,7 +179,7 @@
           <div class="home-hero__text text-white">
             <p>Exclusive office spaces that seamlessly accommodate both comfort and functionality,
               adapting to modern businesses workflow. From private offices to enterprise solutions, we deliver a diverse
-              range of workspaces to help you confidently build your next venture. 
+              range of workspaces to help you confidently build your next venture.
             </p>
           </div>
 
@@ -88,6 +187,7 @@
         </div>
 
       </div>
+
       <div class="home-hero__scroll-down">
         <img src="image/scroll-down.png">
       </div>
@@ -746,7 +846,7 @@
               <p>Whether it's customizing your office space, or enhancing interior aesthetics, we bring together a
                 world-class team of architects and interior designers ready to transform your space.
               </p>
-              <button class="remodeling__button">TALK TO AN ARCHITECT</button>
+              <a href="/" class="button button__white-button">TALK TO AN ARCHITECT</a>
             </div>
           </div>
 
@@ -783,40 +883,134 @@
 
 
         <div class="our-clients__grid">
-          <div class="our-clients__grid-left">
-            <div class="our-clients__paragraph">
-              <blockquote>From their proactive and supportive approach to their consistent updates throughout the entire
-                process,
-                the team's dedication to service excellence assured us that our workspace would be tailor-made for our
-                needs and teams. We wholeheartedly endorse AJS Ventures for transforming what could have been a complex
-                and time-consuming endeavor into a seamless and exclusive experience.</blockquote>
-            </div>
-            <div class="our-clients__client">
-              <img src="image/our-clients/stefan.png" width="62" height="62">
-              <div>
-                <strong>Stefan Veselinovic</strong>
-                <p>Co-founder & COO @ nQode</p>
-                <p>Software development </p>
+          <div>
+            <div class="our-clients__grid-left">
+              <div class="our-clients__paragraph">
+                <blockquote>From their proactive and supportive approach to their consistent updates throughout the
+                  entire
+                  process,
+                  the team's dedication to service excellence assured us that our workspace would be tailor-made for our
+                  needs and teams. We wholeheartedly endorse AJS Ventures for transforming what could have been a
+                  complex
+                  and time-consuming endeavor into a seamless and exclusive experience.</blockquote>
+              </div>
+              <div class="our-clients__client">
+                <img src="image/our-clients/stefan.png" width="62" height="62">
+                <div>
+                  <strong>Stefan Veselinovic</strong>
+                  <p>Co-founder & COO @ nQode</p>
+                  <p>Software development </p>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="our-clients__grid-right">
-            <div class="our-clients__paragraph">
-              <blockquote>Discovering the perfect office space for an architecture firm can be a
-                challenging task but AJS
-                Ventures simplified these challenges. The exceptionally friendly team went the extra mile, providing
-                helpful, accommodating, and responsive service. Setting up was a breeze - we just plugged in our
-                equipment, and we were ready to work within minutes. The office space stands out with spacious,
-                beautiful interiors, complete with modern, comfortable furnishings. Opting for AJS Ventures has proven
-                to be a gratifying decision.</blockquote>
+          <div>
+            <div class="our-clients__grid-right">
+              <div class="our-clients__paragraph">
+                <blockquote>Discovering the perfect office space for an architecture firm can be a
+                  challenging task but AJS
+                  Ventures simplified these challenges. The exceptionally friendly team went the extra mile, providing
+                  helpful, accommodating, and responsive service. Setting up was a breeze - we just plugged in our
+                  equipment, and we were ready to work within minutes. The office space stands out with spacious,
+                  beautiful interiors, complete with modern, comfortable furnishings. Opting for AJS Ventures has proven
+                  to be a gratifying decision.</blockquote>
+              </div>
+              <div class="our-clients__client">
+                <img src="image/our-clients/guy.png" width="62" height="62">
+                <div>
+                  <strong>Guy Beuvery</strong>
+                  <p>Co-founder and Managing partner @ BeeBIM </p>
+                  <p>Architecture and planning</p>
+                </div>
+              </div>
             </div>
-            <div class="our-clients__client">
-              <img src="image/our-clients/guy.png" width="62" height="62">
-              <div>
-                <strong>Guy Beuvery</strong>
-                <p>Co-founder and Managing partner @ BeeBIM </p>
-                <p>Architecture and planning</p>
+          </div>
+
+          <div>
+            <div class="our-clients__grid-left">
+              <div class="our-clients__paragraph">
+                <blockquote>From their proactive and supportive approach to their consistent updates throughout the
+                  entire
+                  process,
+                  the team's dedication to service excellence assured us that our workspace would be tailor-made for our
+                  needs and teams. We wholeheartedly endorse AJS Ventures for transforming what could have been a
+                  complex
+                  and time-consuming endeavor into a seamless and exclusive experience.</blockquote>
+              </div>
+              <div class="our-clients__client">
+                <img src="image/our-clients/stefan.png" width="62" height="62">
+                <div>
+                  <strong>Stefan Veselinovic</strong>
+                  <p>Co-founder & COO @ nQode</p>
+                  <p>Software development </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="our-clients__grid-right">
+              <div class="our-clients__paragraph">
+                <blockquote>Discovering the perfect office space for an architecture firm can be a
+                  challenging task but AJS
+                  Ventures simplified these challenges. The exceptionally friendly team went the extra mile, providing
+                  helpful, accommodating, and responsive service. Setting up was a breeze - we just plugged in our
+                  equipment, and we were ready to work within minutes. The office space stands out with spacious,
+                  beautiful interiors, complete with modern, comfortable furnishings. Opting for AJS Ventures has proven
+                  to be a gratifying decision.</blockquote>
+              </div>
+              <div class="our-clients__client">
+                <img src="image/our-clients/guy.png" width="62" height="62">
+                <div>
+                  <strong>Guy Beuvery</strong>
+                  <p>Co-founder and Managing partner @ BeeBIM </p>
+                  <p>Architecture and planning</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="our-clients__grid-left">
+              <div class="our-clients__paragraph">
+                <blockquote>From their proactive and supportive approach to their consistent updates throughout the
+                  entire
+                  process,
+                  the team's dedication to service excellence assured us that our workspace would be tailor-made for our
+                  needs and teams. We wholeheartedly endorse AJS Ventures for transforming what could have been a
+                  complex
+                  and time-consuming endeavor into a seamless and exclusive experience.</blockquote>
+              </div>
+              <div class="our-clients__client">
+                <img src="image/our-clients/stefan.png" width="62" height="62">
+                <div>
+                  <strong>Stefan Veselinovic</strong>
+                  <p>Co-founder & COO @ nQode</p>
+                  <p>Software development </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="our-clients__grid-right">
+              <div class="our-clients__paragraph">
+                <blockquote>Discovering the perfect office space for an architecture firm can be a
+                  challenging task but AJS
+                  Ventures simplified these challenges. The exceptionally friendly team went the extra mile, providing
+                  helpful, accommodating, and responsive service. Setting up was a breeze - we just plugged in our
+                  equipment, and we were ready to work within minutes. The office space stands out with spacious,
+                  beautiful interiors, complete with modern, comfortable furnishings. Opting for AJS Ventures has proven
+                  to be a gratifying decision.</blockquote>
+              </div>
+              <div class="our-clients__client">
+                <img src="image/our-clients/guy.png" width="62" height="62">
+                <div>
+                  <strong>Guy Beuvery</strong>
+                  <p>Co-founder and Managing partner @ BeeBIM </p>
+                  <p>Architecture and planning</p>
+                </div>
               </div>
             </div>
           </div>
@@ -840,68 +1034,71 @@
 
             <div class="faq__accordion-item">
               <div class="faq__question">What types of office space does AJS Ventures offer?</div>
-              <div class="faq__answer">We offer a range of office solutions tailored to meet diverse needs of our
-                clients
-                and accommodate businesses of all shapes and sizes. If you need your own dedicated space and complete
-                personalization and privacy, then you can choose between a private office with private amenities
-                (kitchen, entertainment zones, dining space, lounge, collaboration space). However, if you have a
-                smaller team or more teams but you only need a dedicated work space, you can choose a private office
-                with shared amenities or rent an office space to fit what you need that you can scale as your business
-                grows. Shared amenities include facilities like meeting rooms and kitchen spaces, lounge and dining
-                area. This arrangement blends the advantages of a private office with the cost-effectiveness and
-                collaborative benefits of shared amenities. For full customization, regardless of the number of
-                employees or the type of business, you can choose full customization. We are here to help you find the
-                best office space solution, which also includes the option to collaborate and invest in a new space
-                together. 
+              <div class="faq__answer">
+                <p>We offer a range of office solutions tailored to meet diverse needs of our
+                  clients
+                  and accommodate businesses of all shapes and sizes. If you need your own dedicated space and complete
+                  personalization and privacy, then you can choose between a private office with private amenities
+                  (kitchen, entertainment zones, dining space, lounge, collaboration space). However, if you have a
+                  smaller team or more teams but you only need a dedicated work space, you can choose a private office
+                  with shared amenities or rent an office space to fit what you need that you can scale as your business
+                  grows. Shared amenities include facilities like meeting rooms and kitchen spaces, lounge and dining
+                  area. This arrangement blends the advantages of a private office with the cost-effectiveness and
+                  collaborative benefits of shared amenities. For full customization, regardless of the number of
+                  employees or the type of business, you can choose full customization. We are here to help you find the
+                  best office space solution, which also includes the option to collaborate and invest in a new space
+                  together.</p>
               </div>
             </div>
-            <hr>
+
 
 
 
 
             <div class="faq__accordion-item">
               <div class="faq__question">What type of equipment do you have in the offices and coworking space?</div>
-              <div class="faq__answer">We offer a range of office solutions tailored to meet diverse needs of our
-                clients
-                and accommodate businesses of all shapes and sizes. If you need your own dedicated space and complete
-                personalization and privacy, then you can choose between a private office with private amenities
-                (kitchen, entertainment zones, dining space, lounge, collaboration space). However, if you have a
-                smaller team or more teams but you only need a dedicated work space, you can choose a private office
-                with shared amenities or rent an office space to fit what you need that you can scale as your business
-                grows. Shared amenities include facilities like meeting rooms and kitchen spaces, lounge and dining
-                area. This arrangement blends the advantages of a private office with the cost-effectiveness and
-                collaborative benefits of shared amenities. For full customization, regardless of the number of
-                employees or the type of business, you can choose full customization. We are here to help you find the
-                best office space solution, which also includes the option to collaborate and invest in a new space
-                together. 
+              <div class="faq__answer">
+                <p>We offer a range of office solutions tailored to meet diverse needs of our
+                  clients
+                  and accommodate businesses of all shapes and sizes. If you need your own dedicated space and complete
+                  personalization and privacy, then you can choose between a private office with private amenities
+                  (kitchen, entertainment zones, dining space, lounge, collaboration space). However, if you have a
+                  smaller team or more teams but you only need a dedicated work space, you can choose a private office
+                  with shared amenities or rent an office space to fit what you need that you can scale as your business
+                  grows. Shared amenities include facilities like meeting rooms and kitchen spaces, lounge and dining
+                  area. This arrangement blends the advantages of a private office with the cost-effectiveness and
+                  collaborative benefits of shared amenities. For full customization, regardless of the number of
+                  employees or the type of business, you can choose full customization. We are here to help you find the
+                  best office space solution, which also includes the option to collaborate and invest in a new space
+                  together.</p>
               </div>
             </div>
-            <hr>
+
 
 
 
             <div class="faq__accordion-item">
               <div class="faq__question">In which ways can I customize my office space?</div>
-              <div class="faq__answer">We offer a range of office solutions tailored to meet diverse needs of our
-                clients
-                and accommodate businesses of all shapes and sizes. If you need your own dedicated space and
-                complete
-                personalization and privacy, then you can choose between a private office with private amenities
-                (kitchen, entertainment zones, dining space, lounge, collaboration space). However, if you have a
-                smaller team or more teams but you only need a dedicated work space, you can choose a private office
-                with shared amenities or rent an office space to fit what you need that you can scale as your
-                business
-                grows. Shared amenities include facilities like meeting rooms and kitchen spaces, lounge and dining
-                area. This arrangement blends the advantages of a private office with the cost-effectiveness and
-                collaborative benefits of shared amenities. For full customization, regardless of the number of
-                employees or the type of business, you can choose full customization. We are here to help you find
-                the
-                best office space solution, which also includes the option to collaborate and invest in a new space
-                together. 
+              <div class="faq__answer">
+                <p>We offer a range of office solutions tailored to meet diverse needs of our
+                  clients
+                  and accommodate businesses of all shapes and sizes. If you need your own dedicated space and
+                  complete
+                  personalization and privacy, then you can choose between a private office with private amenities
+                  (kitchen, entertainment zones, dining space, lounge, collaboration space). However, if you have a
+                  smaller team or more teams but you only need a dedicated work space, you can choose a private office
+                  with shared amenities or rent an office space to fit what you need that you can scale as your
+                  business
+                  grows. Shared amenities include facilities like meeting rooms and kitchen spaces, lounge and dining
+                  area. This arrangement blends the advantages of a private office with the cost-effectiveness and
+                  collaborative benefits of shared amenities. For full customization, regardless of the number of
+                  employees or the type of business, you can choose full customization. We are here to help you find
+                  the
+                  best office space solution, which also includes the option to collaborate and invest in a new space
+                  together.</p>
               </div>
             </div>
-            <hr>
+
 
 
 
@@ -910,149 +1107,155 @@
             <div class="faq__accordion-item">
               <div class="faq__question">Can you help me if I want to remodel my office or design the interior?
               </div>
-              <div class="faq__answer">We offer a range of office solutions tailored to meet diverse needs of our
-                clients
-                and accommodate businesses of all shapes and sizes. If you need your own dedicated space and
-                complete
-                personalization and privacy, then you can choose between a private office with private amenities
-                (kitchen, entertainment zones, dining space, lounge, collaboration space). However, if you have a
-                smaller team or more teams but you only need a dedicated work space, you can choose a private office
-                with shared amenities or rent an office space to fit what you need that you can scale as your
-                business
-                grows. Shared amenities include facilities like meeting rooms and kitchen spaces, lounge and dining
-                area. This arrangement blends the advantages of a private office with the cost-effectiveness and
-                collaborative benefits of shared amenities. For full customization, regardless of the number of
-                employees or the type of business, you can choose full customization. We are here to help you find
-                the
-                best office space solution, which also includes the option to collaborate and invest in a new space
-                together. 
+              <div class="faq__answer">
+                <p>We offer a range of office solutions tailored to meet diverse needs of our
+                  clients
+                  and accommodate businesses of all shapes and sizes. If you need your own dedicated space and
+                  complete
+                  personalization and privacy, then you can choose between a private office with private amenities
+                  (kitchen, entertainment zones, dining space, lounge, collaboration space). However, if you have a
+                  smaller team or more teams but you only need a dedicated work space, you can choose a private office
+                  with shared amenities or rent an office space to fit what you need that you can scale as your
+                  business
+                  grows. Shared amenities include facilities like meeting rooms and kitchen spaces, lounge and dining
+                  area. This arrangement blends the advantages of a private office with the cost-effectiveness and
+                  collaborative benefits of shared amenities. For full customization, regardless of the number of
+                  employees or the type of business, you can choose full customization. We are here to help you find
+                  the
+                  best office space solution, which also includes the option to collaborate and invest in a new space
+                  together.</p>
               </div>
             </div>
-            <hr>
+
 
 
 
             <div class="faq__accordion-item">
               <div class="faq__question">How can I rent a private office?</div>
-              <div class="faq__answer">We offer a range of office solutions tailored to meet diverse needs of our
-                clients
-                and accommodate businesses of all shapes and sizes. If you need your own dedicated space and
-                complete
-                personalization and privacy, then you can choose between a private office with private amenities
-                (kitchen, entertainment zones, dining space, lounge, collaboration space). However, if you have a
-                smaller team or more teams but you only need a dedicated work space, you can choose a private office
-                with shared amenities or rent an office space to fit what you need that you can scale as your
-                business
-                grows. Shared amenities include facilities like meeting rooms and kitchen spaces, lounge and dining
-                area. This arrangement blends the advantages of a private office with the cost-effectiveness and
-                collaborative benefits of shared amenities. For full customization, regardless of the number of
-                employees or the type of business, you can choose full customization. We are here to help you find
-                the
-                best office space solution, which also includes the option to collaborate and invest in a new space
-                together. 
+              <div class="faq__answer">
+                <p>We offer a range of office solutions tailored to meet diverse needs of our
+                  clients
+                  and accommodate businesses of all shapes and sizes. If you need your own dedicated space and
+                  complete
+                  personalization and privacy, then you can choose between a private office with private amenities
+                  (kitchen, entertainment zones, dining space, lounge, collaboration space). However, if you have a
+                  smaller team or more teams but you only need a dedicated work space, you can choose a private office
+                  with shared amenities or rent an office space to fit what you need that you can scale as your
+                  business
+                  grows. Shared amenities include facilities like meeting rooms and kitchen spaces, lounge and dining
+                  area. This arrangement blends the advantages of a private office with the cost-effectiveness and
+                  collaborative benefits of shared amenities. For full customization, regardless of the number of
+                  employees or the type of business, you can choose full customization. We are here to help you find
+                  the
+                  best office space solution, which also includes the option to collaborate and invest in a new space
+                  together.</p>
               </div>
             </div>
-            <hr>
+
 
 
 
 
             <div class="faq__accordion-item">
               <div class="faq__question">How much does an office cost to rent?</div>
-              <div class="faq__answer">We offer a range of office solutions tailored to meet diverse needs of our
-                clients
-                and accommodate businesses of all shapes and sizes. If you need your own dedicated space and
-                complete
-                personalization and privacy, then you can choose between a private office with private amenities
-                (kitchen, entertainment zones, dining space, lounge, collaboration space). However, if you have a
-                smaller team or more teams but you only need a dedicated work space, you can choose a private office
-                with shared amenities or rent an office space to fit what you need that you can scale as your
-                business
-                grows. Shared amenities include facilities like meeting rooms and kitchen spaces, lounge and dining
-                area. This arrangement blends the advantages of a private office with the cost-effectiveness and
-                collaborative benefits of shared amenities. For full customization, regardless of the number of
-                employees or the type of business, you can choose full customization. We are here to help you find
-                the
-                best office space solution, which also includes the option to collaborate and invest in a new space
-                together. 
+              <div class="faq__answer">
+                <p>We offer a range of office solutions tailored to meet diverse needs of our
+                  clients
+                  and accommodate businesses of all shapes and sizes. If you need your own dedicated space and
+                  complete
+                  personalization and privacy, then you can choose between a private office with private amenities
+                  (kitchen, entertainment zones, dining space, lounge, collaboration space). However, if you have a
+                  smaller team or more teams but you only need a dedicated work space, you can choose a private office
+                  with shared amenities or rent an office space to fit what you need that you can scale as your
+                  business
+                  grows. Shared amenities include facilities like meeting rooms and kitchen spaces, lounge and dining
+                  area. This arrangement blends the advantages of a private office with the cost-effectiveness and
+                  collaborative benefits of shared amenities. For full customization, regardless of the number of
+                  employees or the type of business, you can choose full customization. We are here to help you find
+                  the
+                  best office space solution, which also includes the option to collaborate and invest in a new space
+                  together.</p>
               </div>
             </div>
-            <hr>
+
 
 
 
 
             <div class="faq__accordion-item">
               <div class="faq__question">There is not a space that fits my needs at this moment. Can you still help
-                me? 
+                me?
               </div>
-              <div class="faq__answer">We offer a range of office solutions tailored to meet diverse needs of our
-                clients
-                and accommodate businesses of all shapes and sizes. If you need your own dedicated space and
-                complete
-                personalization and privacy, then you can choose between a private office with private amenities
-                (kitchen, entertainment zones, dining space, lounge, collaboration space). However, if you have a
-                smaller team or more teams but you only need a dedicated work space, you can choose a private office
-                with shared amenities or rent an office space to fit what you need that you can scale as your
-                business
-                grows. Shared amenities include facilities like meeting rooms and kitchen spaces, lounge and dining
-                area. This arrangement blends the advantages of a private office with the cost-effectiveness and
-                collaborative benefits of shared amenities. For full customization, regardless of the number of
-                employees or the type of business, you can choose full customization. We are here to help you find
-                the
-                best office space solution, which also includes the option to collaborate and invest in a new space
-                together. 
+              <div class="faq__answer">
+                <p>We offer a range of office solutions tailored to meet diverse needs of our
+                  clients
+                  and accommodate businesses of all shapes and sizes. If you need your own dedicated space and
+                  complete
+                  personalization and privacy, then you can choose between a private office with private amenities
+                  (kitchen, entertainment zones, dining space, lounge, collaboration space). However, if you have a
+                  smaller team or more teams but you only need a dedicated work space, you can choose a private office
+                  with shared amenities or rent an office space to fit what you need that you can scale as your
+                  business
+                  grows. Shared amenities include facilities like meeting rooms and kitchen spaces, lounge and dining
+                  area. This arrangement blends the advantages of a private office with the cost-effectiveness and
+                  collaborative benefits of shared amenities. For full customization, regardless of the number of
+                  employees or the type of business, you can choose full customization. We are here to help you find
+                  the
+                  best office space solution, which also includes the option to collaborate and invest in a new space
+                  together.</p>
               </div>
             </div>
-            <hr>
+
 
 
 
             <div class="faq__accordion-item">
               <div class="faq__question">What happens if my team grows?</div>
-              <div class="faq__answer">We offer a range of office solutions tailored to meet diverse needs of our
-                clients
-                and accommodate businesses of all shapes and sizes. If you need your own dedicated space and
-                complete
-                personalization and privacy, then you can choose between a private office with private amenities
-                (kitchen, entertainment zones, dining space, lounge, collaboration space). However, if you have a
-                smaller team or more teams but you only need a dedicated work space, you can choose a private office
-                with shared amenities or rent an office space to fit what you need that you can scale as your
-                business
-                grows. Shared amenities include facilities like meeting rooms and kitchen spaces, lounge and dining
-                area. This arrangement blends the advantages of a private office with the cost-effectiveness and
-                collaborative benefits of shared amenities. For full customization, regardless of the number of
-                employees or the type of business, you can choose full customization. We are here to help you find
-                the
-                best office space solution, which also includes the option to collaborate and invest in a new space
-                together. 
+              <div class="faq__answer">
+                <p>We offer a range of office solutions tailored to meet diverse needs of our
+                  clients
+                  and accommodate businesses of all shapes and sizes. If you need your own dedicated space and
+                  complete
+                  personalization and privacy, then you can choose between a private office with private amenities
+                  (kitchen, entertainment zones, dining space, lounge, collaboration space). However, if you have a
+                  smaller team or more teams but you only need a dedicated work space, you can choose a private office
+                  with shared amenities or rent an office space to fit what you need that you can scale as your
+                  business
+                  grows. Shared amenities include facilities like meeting rooms and kitchen spaces, lounge and dining
+                  area. This arrangement blends the advantages of a private office with the cost-effectiveness and
+                  collaborative benefits of shared amenities. For full customization, regardless of the number of
+                  employees or the type of business, you can choose full customization. We are here to help you find
+                  the
+                  best office space solution, which also includes the option to collaborate and invest in a new space
+                  together.</p>
               </div>
             </div>
-            <hr>
+
 
 
 
             <div class="faq__accordion-item">
               <div class="faq__question">What do I need to know before looking for office space</div>
-              <div class="faq__answer">We offer a range of office solutions tailored to meet diverse needs of our
-                clients
-                and accommodate businesses of all shapes and sizes. If you need your own dedicated space and
-                complete
-                personalization and privacy, then you can choose between a private office with private amenities
-                (kitchen, entertainment zones, dining space, lounge, collaboration space). However, if you have a
-                smaller team or more teams but you only need a dedicated work space, you can choose a private office
-                with shared amenities or rent an office space to fit what you need that you can scale as your
-                business
-                grows. Shared amenities include facilities like meeting rooms and kitchen spaces, lounge and dining
-                area. This arrangement blends the advantages of a private office with the cost-effectiveness and
-                collaborative benefits of shared amenities. For full customization, regardless of the number of
-                employees or the type of business, you can choose full customization. We are here to help you find
-                the
-                best office space solution, which also includes the option to collaborate and invest in a new space
-                together. 
+              <div class="faq__answer">
+                <p>We offer a range of office solutions tailored to meet diverse needs of our
+                  clients
+                  and accommodate businesses of all shapes and sizes. If you need your own dedicated space and
+                  complete
+                  personalization and privacy, then you can choose between a private office with private amenities
+                  (kitchen, entertainment zones, dining space, lounge, collaboration space). However, if you have a
+                  smaller team or more teams but you only need a dedicated work space, you can choose a private office
+                  with shared amenities or rent an office space to fit what you need that you can scale as your
+                  business
+                  grows. Shared amenities include facilities like meeting rooms and kitchen spaces, lounge and dining
+                  area. This arrangement blends the advantages of a private office with the cost-effectiveness and
+                  collaborative benefits of shared amenities. For full customization, regardless of the number of
+                  employees or the type of business, you can choose full customization. We are here to help you find
+                  the
+                  best office space solution, which also includes the option to collaborate and invest in a new space
+                  together.</p>
               </div>
             </div>
-            <hr>
+
 
 
 
@@ -1090,7 +1293,8 @@
           <label for="company">Company Name</label><br>
           <input type="text" id="company" name="company"><br><br>
           <label for="interested">Interested in</label><br>
-          <select name="interested" id="interested">
+          <select class="interested-in" name="interested" id="interested">
+            <option value=""></option>
             <option value="ready-to">Ready-to move in offices</option>
             <option value="custom">Custom office/Enterprise solution</option>
             <option value="coworking">Coworking space</option>
@@ -1099,7 +1303,7 @@
           </select><br>
           <br>
           <textarea placeholder="Message">Message</textarea><br>
-          <button class="remodeling__button" type="submit">GET IN TOUCH</button>
+          <a href="/" class="button button__white-button" type="submit">GET IN TOUCH</a>
         </form>
       </div>
 
@@ -1108,12 +1312,17 @@
       <div class="contact-us__right" style="background-image: url(image/transparent-green.png);">
         <div class="contact-us__right-info">
           <div class="contact-us__info">
-          <h4>OR CALL US</h4>
-          <p>Inquiries about plans, pricing, or availability? <br>Simply let your team reach out to ours.</p>
-            </div>
-          <div class="contact-us__phone-number">
-            <button class="contact-us button__white-border"><a href="/"><img src="image/phone.svg" width="14" height="14">+381 69 2030230</a></button>
+            <h4>OR CALL US</h4>
+            <p>Inquiries about plans, pricing, or availability? <br>Simply let your team reach out to ours.</p>
           </div>
+
+          <a href="tel:+381692030230" class="button button__white-border"><svg width="14" height="13"
+              viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M9.72714 8.67331L9.40485 8.99419C9.40485 8.99419 8.63773 9.75635 6.5446 7.67527C4.45148 5.59419 5.2186 4.83202 5.2186 4.83202L5.42118 4.62944C5.92198 4.13219 5.96943 3.33319 5.53239 2.74952L4.63989 1.55739C4.09873 0.834894 3.05393 0.739269 2.43414 1.35552L1.32206 2.46052C1.01535 2.76652 0.809934 3.16177 0.834726 3.60094C0.898476 4.72506 1.40706 7.1426 4.24323 9.96319C7.25152 12.9538 10.0742 13.0728 11.2281 12.9651C11.5936 12.9311 11.9109 12.7455 12.1666 12.4905L13.1725 11.4904C13.8525 10.8153 13.6612 9.65719 12.7914 9.18473L11.4385 8.44877C10.8676 8.13923 10.1734 8.22989 9.72714 8.67331Z"
+                fill="white" />
+            </svg>+381 69 2030230</a>
+          </a>
         </div>
       </div>
       <!-- </div> -->
@@ -1127,7 +1336,7 @@
       <div class="container">
         <div class="footer__flex">
           <div class="footer__flex-left">
-            <div class="footer__info"><img src="image/ventures-logo.png"></div>
+            <div class="footer__info"><img src="image/ventures-logo.svg"></div>
             <div class="footer__info">
               <p class="footer__heading">ABOUT</p>
               <p>AJS Ventures</p>
@@ -1138,18 +1347,18 @@
             <div class="footer__info">
               <p class="footer__heading">CONTACT</p>
               <ul>
-              <li><a href="/">contact@ajs.ventures</a></li>
-              <li><a href="/">sales@ajs.ventures</a></li>
+                <li><a href="/">contact@ajs.ventures</a></li>
+                <li><a href="/">sales@ajs.ventures</a></li>
               </ul>
             </div>
             <div class="footer__info">
               <p class="footer__heading">OUR SPACES</p>
               <ul>
-              <li><a href="/">Erker</a></li>
-              <li><a href="/">Bazar 3. sprat</a></li>
-              <li><a href="/">Bazar 2. sprat</a></li>
-              <li><a href="/">Inobačka</a></li>
-              <li><a href="/">TLD</a></li>
+                <li><a href="/">Erker</a></li>
+                <li><a href="/">Bazar 3. sprat</a></li>
+                <li><a href="/">Bazar 2. sprat</a></li>
+                <li><a href="/">Inobačka</a></li>
+                <li><a href="/">TLD</a></li>
               </ul>
             </div>
           </div>
@@ -1158,8 +1367,8 @@
           <div class="footer__copyright">
             <div class="footer__copyright-info">
               <ul>
-              <li><a href="/">Privacy policy</a></li>
-              <li><a href="/">Terms & Conditions</a></li>
+                <li><a href="/">Privacy policy</a></li>
+                <li><a href="/">Terms & Conditions</a></li>
               </ul>
             </div>
             <div class="footer__copyright-info">
@@ -1181,6 +1390,15 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <!-- <script src="js/lightbox.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.interested-in').select2({
+        placeholder: "",
+        minimumResultsForSearch: Infinity
+      });
+    });
+  </script>
   <script type="text/javascript" src="js/slick.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
 </body>

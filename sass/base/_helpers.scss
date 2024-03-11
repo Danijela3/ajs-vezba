@@ -7,3 +7,18 @@
     color: $text-white-off;
 }
 
+
+section {
+    padding-top: 80px;
+    padding-bottom: 70px;
+}
+
+.no-scroll {
+    overflow-y: hidden;
+}
+
+.desktop-hide {
+    @include respond-to("medium") {
+        display: none !important;
+    }
+}

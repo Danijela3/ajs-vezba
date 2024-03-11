@@ -8,8 +8,8 @@
         color: white;
 
         @include respond-to("small") {
-            display: flex;
-            gap: 243px;
+            display: grid;
+            grid-template-columns: 1fr 5fr;
 
         }
 
@@ -20,6 +20,16 @@
         overflow: hidden;
         // transition: all 0.3s ease-in-out;
         max-height: 0;
+
+       
+    }
+
+    &__answer p {
+    
+            padding-bottom: 15px;
+            
+            
+        
     }
 
 
@@ -34,6 +44,7 @@
 
     &__accordion-item {
         position: relative;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
         &.active {
             .faq__answer {
@@ -74,6 +85,7 @@
         position: relative;
         cursor: pointer;
         margin-bottom: 20px;
+        margin-top: 12px;
     }
 
     &__question::before {
@@ -91,11 +103,7 @@
 
     }
 
-    hr {
-
-        border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
+   
 
 
 }

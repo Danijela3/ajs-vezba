@@ -1,6 +1,6 @@
 .coworking {
 
-    padding-bottom: 120px;
+    padding-top: 0;
 
     
 
@@ -33,21 +33,22 @@
 
     h2 {
 
-        margin-bottom: 30px; 
+        margin-bottom: 50px; 
         color: white;
     }
 
     &__description {
 
         display: block;
-        margin-top: 90px; 
+        margin-top: 90px;
+        margin-bottom: 50px; 
         
 
         @include respond-to("small") {
         display:grid;
         grid-template-columns: 1fr 1fr;
         row-gap: 40px;
-        margin-top: 120px;
+        
         margin-bottom: 100px;
         }
 

@@ -1,8 +1,84 @@
 .header {
-  padding: 10px;
+
   height: 100px;
+  width: 100%;
   position: relative;
   z-index: 999;
+  padding-top: 20px;
+  transition: all 0.25s ease-in-out;
+
+  @include respond-to("medium") {
+    padding: 0;
+  }
+
+
+  .logo-black {
+    display: none;
+  }
+
+
+  &.sticky {
+
+    @include respond-to("medium") {
+      background: linear-gradient(180deg, rgba(255, 255, 255, .2) 0%, rgba(255, 255, 255, .1) 100%);
+      backdrop-filter: blur(3px);
+      position: fixed;
+
+
+      .navigation a {
+        color: black;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+
+      .header__phone-number {
+        color: black;
+
+        &:hover
+         {
+          color: $primary-color;
+          svg path {
+          fill: $primary-color;
+          }
+
+        }
+
+
+      }
+
+      svg path {
+        fill: black;
+
+        &:hover {
+          fill: $primary-color;
+        }
+      }
+
+      img {
+        display: none;
+      }
+
+      .logo-black {
+        display: block;
+
+
+
+      }
+
+      .header__logo {
+        width: 60px;
+      }
+
+      .button {}
+
+      .button__white-border {
+        border: 1px solid black;
+      }
+    }
+
+  }
 
   &__left,
   &__right {
@@ -11,27 +87,100 @@
   }
 
   &__logo {
-    margin-top: 10px;
+
     margin-right: 17px;
+    width: 50px;
+
+
+    &-mobile {
+      @include respond-to("medium") {
+        display: none;
+      }
+    }
+
+
+    
+
+
+
+
+    @include respond-to("medium") {
+      width: 70px;
+      transition: width 0.2s ease;
+
+    }
+
+    img,
+    svg {
+      width: 100%;
+      
+    }
+
   }
+
+  
 
   &__phone-number {
     color: white;
     text-decoration: none;
     margin-right: 5px;
     display: none;
-     @include respond-to("medium") {
+
+    @include respond-to("medium") {
       display: inline;
+    }
+
+    &-mobile {
+      color: white;
+      text-decoration: none;
+
+      @include respond-to("medium") {
+        display: none;
       }
+
+
+    }
+
+    svg path {
+      transition: 0.25s ease-in-out;
+
+    }
+
+    &:hover
+    {
+     color: $primary-color;
+     svg path {
+     fill: $primary-color;
+     }
+
+   }
+
+
+
   }
+
+ 
+
+  &__phone-number:hover {
+    color: $primary-color;
+  }
+
+  svg path:hover {
+    fill: $primary-color;
+  }
+
+
+
 
   &__phone-icon {
     margin-bottom: -2px;
   }
 
   &__hamburger-button {
-    
-    display: block;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     top: 18px;
     right: 17px;
@@ -40,11 +189,37 @@
     height: 41px;
     background: transparent;
     border: none;
-    
+
     @include respond-to("medium") {
       display: none;
-    } 
+    }
   }
+
+  .transparent {
+    background: linear-gradient(180deg, rgba(255, 255, 255, .2) 0%, rgba(255, 255, 255, .1) 100%);
+    backdrop-filter: blur(3px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .header__span span {
+      background-color: black;
+    }
+
+    @include respond-to("medium") {
+      display: none;
+    }
+
+  }
+
+
+
+
+
+
+
+
 
   &__hamburger-button span {
     display: block;
@@ -61,18 +236,61 @@
 
   }
 
-  #header-logo {
-    width: 50px;
-    height: 60px;
 
+
+
+
+  &__close-button {
     @include respond-to("medium") {
-      width: 70px;
-      height: 80px;
+      display: none;
     }
   }
 
-  
 
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
 
+ .dropdown::before {
+    content: "";
+    position: absolute;
+    top: 40%;
+    right: 110px;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 5px 5px 5px;
+    border-color: transparent transparent $primary-color transparent;
+    transform: rotate(180deg);
+
+    &:hover {
+      border-color: transparent transparent $primary-color transparent;
+      
+    }
+}
+
+  .sub-menu {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 1px;
+    background-color: $primary-color;
+    color: white;
+    min-width: 110px;
+    z-index: 1;
+
+    
+    
+  }
+
+  .dropdown:hover .sub-menu {
+    display: block;
+    
+  }
+
+  .phone-number:hover {
+    color: $primary-color;
+  }
 
 }

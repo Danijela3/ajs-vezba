@@ -1,5 +1,9 @@
 .our-clients {
-    padding: 120px 0;
+    padding-bottom: 0;
+
+    @include respond-to("small") {
+        padding-bottom: 70px;
+    }
 
     &__grid-header {
 
@@ -11,6 +15,8 @@
         }
     }
 
+
+
     &__grid-header-left h2 {
         margin-bottom: 16px;
     }
@@ -18,14 +24,20 @@
     &__grid-header-left p {
 
         font-size: 18px;
-        @include respond-to("small"){
-        font-size: 22px;
-        color: #454545;
+
+        @include respond-to("small") {
+            font-size: 22px;
+            color: #454545;
+        }
     }
-}
 
     &__paragraph {
-        padding-bottom: 36px;
+
+        padding-bottom: 0;
+
+        @include respond-to("small") {
+            padding-bottom: 36px;
+        }
     }
 
 
@@ -41,12 +53,11 @@
         margin-bottom: 30px;
         border-top: 1px solid #717171;
         padding: 26px 0 0 0;
+        display: flex;
+        gap: 10px;
+        min-height: 115px;
 
-        @include respond-to("small") {
-            display: flex;
-            gap: 10px;
 
-        }
     }
 
     &__client p {
@@ -59,44 +70,79 @@
         margin-top: 78px;
         display: block;
 
-        @include respond-to("small") {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            margin-top: 98px;
-            column-gap: 20px;
 
-        }
+
     }
 
     &__grid-left {
-        margin-bottom: 70px;
-        @include respond-to("small"){
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin-bottom: 22px;
-        
-    }
-    @include respond-to("medium"){
-        margin-bottom: 0;
-    }
-}
+        height: 100%;
 
-    &__grid-right {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+
 
     }
+
 
     &__paragraph blockquote {
-        margin: 0;
+        margin: 0 0 20px 0;
+
+        @include respond-to("small") {
+            margin: 0 !important;
+        }
 
     }
 
     // &__grid-right p {
     // padding-bottom: 36px;
     // }
+
+    .slick-track {
+        margin-top: 50px;
+        display: flex;
+    }
+
+    .slick-slide {
+        >div {
+            height: 100%;
+
+            >div {
+                height: 100%;
+            }
+        }
+    }
+
+    .slick-dots {
+        display: none !important;
+    }
+
+    .my-arrow {
+        align-items: start;
+        // position: absolute;
+        justify-content: end;
+
+
+    }
+
+    .my-arrow__prev {
+        right: 60px;
+        left: auto;
+    }
+
+     /* the slides */
+  .slick-slide {
+    margin: 0 10px;
+}
+
+/* the parent */
+.slick-list {
+    margin: 0 -10px;
+}
+
+
+
+
 
 
 }

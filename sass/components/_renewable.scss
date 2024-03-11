@@ -2,5 +2,13 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
+    min-height: 60vh;
+
+    @include respond-to("medium") {
+        min-height: 80vh;
+    }
+
+    @include respond-to("large") {
+    min-height: 90vh;
+    }
 }

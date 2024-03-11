@@ -8,22 +8,82 @@
     font-family: $font;
     text-decoration: none;
     text-transform: uppercase;
-    &__primary{
+    transition: all 0.3s ease-in-out;
+
+    &__primary {
         background-color: $primary-color;
         color: white;
         border: 1px solid $primary-color;
+
+        &:hover {
+            color: $title-color;
+            background-color: white;
+            border: 1px solid white;
+        }
     }
 
     &__primary-border {
         border: 1px solid $primary-color;
         color: $primary-color;
-        
+
+        &:hover {
+            background-color: $primary-color;
+            color: white;
+            border: 1px solid $primary-color;
+        }
+
     }
+
+
 
     &__white-border {
         border: 1px solid white;
         color: white;
+
+        &:hover {
+            background-color: white;
+            color: $primary-color;
+            border: 1px solid white;
+
+            // fill: $primary-color;
+            svg path {
+                fill: $primary-color;
+
+            }
+
+
+        }
+
+        svg path {
+            transition: all 0.3s ease-in-out;
+        }
+
     }
+
+
+
+
+
+
+
+
+
+    &__white-button {
+        border: 1px solid white;
+        background: white;
+        color: $title-color;
+        margin-top: 36px;
+        text-align: center;
+
+        &:hover {
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+    }
+
+
+
 
 
 }
